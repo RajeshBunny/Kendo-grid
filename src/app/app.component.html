@@ -1,0 +1,16 @@
+<kendo-grid [data]="gridData" [pageSize]="20" [pageable]="true" [sortable]="true" [groupable]="true" [reorderable]="true"
+  kendoGridSelectBy="ProductID" [(selectedKeys)]="mySelection" [resizable]="true" [height]="500" [columnMenu]="{ filter: true }">
+  <ng-template kendoGridToolbarTemplate>
+    <kendo-grid-spacer></kendo-grid-spacer>
+    <button kendoGridExcelCommand type="button" icon="file-excel">
+      Export to Excel
+    </button>
+    <button kendoGridPDFCommand icon="file-pdf">Export to PDF</button>
+  </ng-template>
+  <kendo-grid-checkbox-column [width]="45" [headerClass]="{ 'text-center': true }" [class]="{ 'text-center': true }" [resizable]="false"
+    [columnMenu]="false" [showSelectAll]="true"></kendo-grid-checkbox-column>
+  <kendo-grid-column field="ProductID" title="ID"> </kendo-grid-column>
+  <kendo-grid-column field="ProductName" title="Name"> </kendo-grid-column>
+  <kendo-grid-column field="Category.CategoryName" title="Category"> </kendo-grid-column>
+  <kendo-grid-column field="UnitPrice" title="Price"> </kendo-grid-column>
+</kendo-grid>

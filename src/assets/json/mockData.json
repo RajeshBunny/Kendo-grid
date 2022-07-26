@@ -1,0 +1,20 @@
+[
+    {
+        "ProductID": 1,
+        "ProductName": "Tea",
+        "UnitPrice": 18,
+        "Category": {
+            "CategoryID": 1,
+            "CategoryName": "Bee"
+        }
+    },
+    {
+        "ProductID": 2,
+        "ProductName": "Tea",
+        "UnitPrice": 18,
+        "Category": {
+            "CategoryID": 1,
+            "CategoryName": "Bee"
+        }
+    }
+]
