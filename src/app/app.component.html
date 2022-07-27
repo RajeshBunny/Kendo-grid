@@ -1,11 +1,10 @@
-<kendo-grid [data]="gridData" [pageSize]="20" [pageable]="true" [sortable]="true" [groupable]="true" [reorderable]="true"
+<!-- <kendo-grid [data]="gridData" [pageSize]="20" [pageable]="true" [sortable]="true" [groupable]="true" [reorderable]="true"
   kendoGridSelectBy="ProductID" [(selectedKeys)]="mySelection" [resizable]="true" [height]="500" [columnMenu]="{ filter: true }">
   <ng-template kendoGridToolbarTemplate>
     <kendo-grid-spacer></kendo-grid-spacer>
     <button kendoGridExcelCommand type="button" icon="file-excel">
       Export to Excel
     </button>
-    <button kendoGridPDFCommand icon="file-pdf">Export to PDF</button>
   </ng-template>
   <kendo-grid-checkbox-column [width]="45" [headerClass]="{ 'text-center': true }" [class]="{ 'text-center': true }" [resizable]="false"
     [columnMenu]="false" [showSelectAll]="true"></kendo-grid-checkbox-column>
@@ -13,4 +12,42 @@
   <kendo-grid-column field="ProductName" title="Name"> </kendo-grid-column>
   <kendo-grid-column field="Category.CategoryName" title="Category"> </kendo-grid-column>
   <kendo-grid-column field="UnitPrice" title="Price"> </kendo-grid-column>
+  
+</kendo-grid> -->
+
+<kendo-grid [data]="gridData" [pageSize]="20" [groupable]="true" [reorderable]="true" kendoGridSelectBy="ProductID" [(selectedKeys)]="mySelection"
+  [resizable]="true" [height]="500">
+  <kendo-grid-column-group title="" [width]="600" [locked]="false">
+    <kendo-grid-checkbox-column [width]="50" [headerClass]="{ 'text-center': true }" [class]="{ 'text-center': true }" [resizable]="false"
+      [columnMenu]="false"></kendo-grid-checkbox-column>
+  </kendo-grid-column-group>
+  <kendo-grid-column-group title="Product Information" [width]="600" [locked]="false">
+    <kendo-grid-column>
+      <ng-template kendoGridHeaderTemplate let-column let-columnIndex="columnIndex">
+        <span class="k-icon k-i-calendar"></span>
+      </ng-template>
+    </kendo-grid-column>
+  </kendo-grid-column-group>
+  <kendo-grid-column-group title="Product Information" [width]="600" [locked]="false">
+    <kendo-grid-column field="InvestgationDetails" title="Investgation Details" [width]="300" [locked]="false">
+
+    </kendo-grid-column>
+  </kendo-grid-column-group>
+  <kendo-grid-column-group title="Other Information" [width]="600" [locked]="false">
+
+    <kendo-grid-column field="UnitPrice" title="" [width]="300" [locked]="false">
+    </kendo-grid-column>
+  </kendo-grid-column-group>
+
+  <kendo-grid-column-group title="Start Date" [width]="600" [locked]="false">
+
+    <kendo-grid-column field="UnitPrice" title="" [width]="300" [locked]="false">
+    </kendo-grid-column>
+  </kendo-grid-column-group>
+  <kendo-grid-column-group title="" [width]="300" [locked]="false">
+
+    <kendo-grid-column field="" title="" [width]="300" [locked]="false">
+    </kendo-grid-column>
+  </kendo-grid-column-group>
+
 </kendo-grid>
